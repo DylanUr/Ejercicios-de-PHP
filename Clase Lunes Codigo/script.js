@@ -1,18 +1,18 @@
-// Login logic
+// login
 document.getElementById("login-form")?.addEventListener("submit", function(event) {
     event.preventDefault();
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    // Simple login validation (this can be replaced with actual authentication)
+    
     if (username === "admin" && password === "1234") {
-        window.location.href = "task_manager.html"; // Redirect to task manager
+        window.location.href = "task_manager.html"; 
     } else {
         alert("Invalid username or password");
     }
 });
 
-// Task manager logic
+// task manager 
 if (window.location.pathname.includes("task_manager.html")) {
     const taskForm = document.getElementById("task-form");
     const taskList = document.getElementById("task-list");
