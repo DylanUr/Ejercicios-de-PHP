@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Hola, {{ nombre }}</h1>
+    {% if es_estudiante %}
+        <p>Eres un estudiante.</p>
+    {% else %}
+        <p>No eres un estudiante.</p>
+    {% endif %}
+
+    <ul>
+        {% for item in lista %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
